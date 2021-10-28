@@ -1,4 +1,4 @@
-resource "aws_instance" "codefresh" {
+resource "aws_instance" "codefresh1" {
   ami                   = "${var.ami_id}"
   instance_type         = "${var.aws_instance_type}"
   key_name              = "${var.private_key_name}"
@@ -10,10 +10,6 @@ resource "aws_instance" "codefresh" {
   } 
 }
 
-## Terraform Backend ##
-terraform {
-  backend "s3" {}
-}
 
 
 

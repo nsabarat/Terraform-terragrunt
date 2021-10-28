@@ -13,7 +13,7 @@ variable "ami_id" {
 }
 
 variable "name" {
-  default    = "Terraform-Terragrunt"
+  default    = "Terraform-Terragrunt2"
 }
 
 variable "private_key_name" {
