@@ -1,26 +1,23 @@
 
 variable "aws_region" {
-  default    = ""
+  default    = "us-east-1c"
 }
 
 variable "aws_instance_type" {
-  default    = ""
+  default    = "t2.micro"
 }
 
 variable "ami_id" {
-  default    = ""
+  default    = "ami-08fff96d475023079"
 }
 
 variable "name" {
-  default    = ""
+  default    = "Terraform-Terragrunt"
 }
 
 variable "private_key_name" {
-  default    = ""
+  default    = "TestingANZ"
 }
-
-
-
 
 
 variable "vpc_name" {
