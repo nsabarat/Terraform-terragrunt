@@ -1,3 +1,6 @@
+provider "aws" {
+  region = "us-east-1"
+}
 
 terraform {
   source = "git::git@github.com:slitsevych/terragrunt-example-modules.git//vpc?ref=1.0.1"
