@@ -32,7 +32,7 @@ EOF
 terraform {
   source = "tfr:///terraform-aws-modules/security-group/aws//modules/http-80?version=4.4.0"
 }
-
+/*
 inputs = {
   name        = "web-server"
   description = "Security group for web-server with HTTP ports open within VPC"
@@ -40,6 +40,7 @@ inputs = {
 
   ingress_cidr_blocks = ["10.10.0.0/16"]
 }
+*/
 
 
 
