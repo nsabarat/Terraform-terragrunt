@@ -1,33 +1,32 @@
 
-resource "aws_instance" "codefresh" {
-  ami                   = "ami-08fff96d475023079"
-  instance_type         = "t2.micro"
-  key_name              = "TestingANZ"
-  availability_zone     = "us-east-1c"
-  associate_public_ip_address  = "true"
-    tags = {
-    name = "terragrunt-app"
-	Autostop = "yes"
-  }
-}
+
 # Include all settings from the root terragrunt.hcl file
 include {
   path = find_in_parent_folders()
 }
-/*
+
 terraform {
-  source = "git::git@github.com:slitsevych/terragrunt-example-modules.git//vpc?ref=1.0.1"
+  source = "tfr:///terraform-aws-modules/vpc/aws?version=3.5.0"
 }
 
 
 
 # These are the variables we have to pass in to use the module specified in the terragrunt configuration above
 inputs = {
-  name           = "vpc_prod"
-  vpc_cidr = "172.16.100.0/20"
-  public_subnets_cidr = ["172.16.100.0/24", "172.16.101.0/24"]
-  private_subnets_cidr = ["172.16.102.0/24", "172.16.103.0/24"]
-  db_subnets_cidr = ["172.16.104.0/24", "172.16.105.0/24"]
+  name = "my-vpc"
+  cidr = "10.0.0.0/16"
+
+  azs             = ["eu-west-1a", "eu-west-1b", "eu-west-1c"]
+  private_subnets = ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"]
+  public_subnets  = ["10.0.101.0/24", "10.0.102.0/24", "10.0.103.0/24"]
+
+  enable_nat_gateway = true
+  enable_vpn_gateway = false
+
+  tags = {
+    Terraform = "true"
+    Environment = "dev"
+  }
 }
 
-*/
+
