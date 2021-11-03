@@ -3,11 +3,12 @@
 # Include all settings from the root terragrunt.hcl file
 include {
   path = find_in_parent_folders()
+  providers = ["aws"]
 }
 
 terraform {
-  #source = "tfr:///terraform-aws-modules/vpc/aws?version=3.5.0"
-  backend "s3" {}
+  source = "tfr:///terraform-aws-modules/vpc/aws?version=3.5.0"
+  #backend "s3" {}
 }
 
 
