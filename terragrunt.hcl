@@ -29,17 +29,8 @@ provider "aws" {
 EOF
 }
 
-terraform {
-  source = "tfr:///terraform-aws-modules/security-group/aws//modules/http-80"
-}
 
-inputs = {
-  name        = "web-server"
-  description = "Security group for web-server with HTTP ports open within VPC"
-  vpc_id      = "vpc-0a7abf9519efd301a"
 
-  ingress_cidr_blocks = ["10.10.0.0/16"]
-}
 
 
 
