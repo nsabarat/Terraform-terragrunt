@@ -4,12 +4,12 @@ generate "backend" {
   contents = <<EOF
 terraform {
   backend "s3"
-  config = {
+  {
     bucket = "tfstatetestanz"
     
-    key = "${path_relative_to_include()}/terraform.tfstate"
+    key = "terraform/anz/terragrunt/terraform.tfstate"
     region         = "us-east-1"
-    encrypt        = true
+    #encrypt        = true
     }
   }
 }
