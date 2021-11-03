@@ -7,7 +7,7 @@ include "root" {
 }
 
 terraform {
-  source = "terraform-aws-modules/vpc"
+  source = "terraform-aws-modules/vpc/aws"
   #backend "s3" {}
 }
 
