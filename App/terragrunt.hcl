@@ -1,9 +1,9 @@
 
 
 # Include all settings from the root terragrunt.hcl file
-include {
+include "root" {
   path = find_in_parent_folders()
-  providers = ["aws"]
+  #providers = ["aws"]
 }
 
 terraform {
