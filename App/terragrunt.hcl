@@ -7,11 +7,10 @@ include {
 
 terraform {
   source = "tfr:///terraform-aws-modules/vpc/aws?version=3.5.0"
+  backend "s3" {}
 }
 
-terraform {                                                                                      
-  backend "s3" {}                                                                                
-}
+
 
 
 
