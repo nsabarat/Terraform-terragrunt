@@ -30,7 +30,7 @@ EOF
 }
 
 terraform {
-  source = "tfr:///terraform-aws-modules/security-group/aws//modules/http-80"
+  source = "tfr:///terraform-aws-modules/security-group/aws//modules/http-80?version=4.4.0"
 }
 
 inputs = {
