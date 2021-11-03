@@ -12,7 +12,7 @@ terraform {
     #encrypt        = true
     }
   }
-}
+
 EOF
 }
 
