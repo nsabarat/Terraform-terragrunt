@@ -9,8 +9,16 @@ remote_state {
   }
 }
 
+generate "provider" {
+  path      = "provider.tf"
+  if_exists = "overwrite_terragrunt"
+  contents  = <<EOF
 provider "aws" {
   region = "us-east-1"
+  # Only these AWS Account IDs may be operated on by this template
+  # allowed_account_ids = ["${local.account_id}"]
+}
+EOF
 }
 
   
