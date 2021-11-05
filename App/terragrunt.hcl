@@ -8,6 +8,10 @@ include "root" {
 #expose = true
 }
 
+terraform {
+  source = "tfr:///terraform-aws-modules/security-group/aws//modules/http-80?version=4.4.0"
+}
+
 
 inputs = {
   name        = "web-server-1"
