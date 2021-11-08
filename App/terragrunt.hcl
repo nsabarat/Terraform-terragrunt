@@ -8,7 +8,7 @@ include "root" {
 #expose = true
 }
 
-resource "aws_instance" "codefresh" {
+resource "aws_instance" "codefresh1" {
   ami                   = "ami-08fff96d475023079"
   instance_type         = "t2.micro"
   key_name              = "TestingANZ"
